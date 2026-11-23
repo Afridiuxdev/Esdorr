@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, FlaskConical, ShieldCheck, Sprout, Sun } from "lucide-react";
+import { assetPath } from "@/data/site-config";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -39,7 +40,7 @@ export default function AboutPage() {
           <div className="lg:col-span-6">
             <div className="overflow-hidden rounded-3xl shadow-xl shadow-espresso/8 border border-white/70">
               <img
-                src="/images/story-petri-serum.jpg"
+                src={assetPath("/images/story-petri-serum.jpg")}
                 alt="ESDORR laboratory serum formulation in clear glass petri dish"
                 className="w-full aspect-[4/3] object-cover"
               />
@@ -110,7 +111,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 items-center">
           <div className="lg:col-span-6">
             <img
-              src="/images/benefits-portrait.jpg"
+              src={assetPath("/images/benefits-portrait.jpg")}
               alt="Radiant skin in natural morning light"
               className="w-full h-full min-h-[340px] object-cover"
             />

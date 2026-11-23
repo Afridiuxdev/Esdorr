@@ -12,7 +12,7 @@ import {
   Droplet,
   Waves,
 } from "lucide-react";
-import { PRODUCTS } from "@/data/site-config";
+import { PRODUCTS, assetPath } from "@/data/site-config";
 
 export default function HomePage() {
   const [serum, sunscreen] = PRODUCTS;
@@ -25,7 +25,7 @@ export default function HomePage() {
           {/* Background Hero Image */}
           <div className="relative min-h-[540px] lg:min-h-[620px] flex items-center">
             <img
-              src="/images/hero-products.jpg"
+              src={assetPath("/images/hero-products.jpg")}
               alt="ESDORR Melano Glo TX Serum and Bright GLO Sunscreen SPF 50 PA++++ on travertine stone in warm morning light"
               className="absolute inset-0 h-full w-full object-cover object-center lg:object-right"
             />
@@ -298,7 +298,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 items-center">
           <div className="lg:col-span-6 h-full">
             <img
-              src="/images/benefits-portrait.jpg"
+              src={assetPath("/images/benefits-portrait.jpg")}
               alt="Radiant Indian woman with clear, healthy glowing skin in warm morning sunlight"
               className="w-full h-full min-h-[320px] lg:min-h-[440px] object-cover object-center"
             />
@@ -363,7 +363,7 @@ export default function HomePage() {
             <div className="rounded-3xl bg-cream border border-border-warm/80 p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-6">
               <div className="w-full sm:w-44 shrink-0 overflow-hidden rounded-2xl bg-[#FCECE0]">
                 <img
-                  src="/images/routine-step1-dropper.jpg"
+                  src={assetPath("/images/routine-step1-dropper.jpg")}
                   alt="Glass dropper releasing a golden serum droplet"
                   className="w-full aspect-[4/3] object-cover"
                 />
@@ -390,7 +390,7 @@ export default function HomePage() {
             <div className="rounded-3xl bg-cream border border-border-warm/80 p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-6">
               <div className="w-full sm:w-44 shrink-0 overflow-hidden rounded-2xl bg-[#FAF5EE]">
                 <img
-                  src="/images/routine-step2-swatch.jpg"
+                  src={assetPath("/images/routine-step2-swatch.jpg")}
                   alt="Silky white sunscreen swatch texture"
                   className="w-full aspect-[4/3] object-cover"
                 />
@@ -453,7 +453,7 @@ export default function HomePage() {
             <div className="lg:col-span-6">
               <div className="overflow-hidden rounded-3xl shadow-xl shadow-espresso/8 border border-white/60">
                 <img
-                  src="/images/story-petri-serum.jpg"
+                  src={assetPath("/images/story-petri-serum.jpg")}
                   alt="Golden luminous skincare serum inside a clear laboratory petri dish"
                   className="w-full aspect-[4/3] object-cover"
                 />

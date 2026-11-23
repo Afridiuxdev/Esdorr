@@ -1,3 +1,9 @@
+export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+export function assetPath(path: string): string {
+  return `${BASE_PATH}${path}`;
+}
+
 export interface MarketplaceLink {
   name: "Amazon" | "Nykaa" | "Flipkart";
   url: string;
@@ -76,8 +82,8 @@ export const PRODUCTS: Product[] = [
     mrpInr: 849,
     skinTypes: "All Skin Types • Fragrance-Free",
     cardTheme: "blush",
-    image: "/images/melano-glo-serum.png",
-    textureImage: "/images/routine-step1-dropper.jpg",
+    image: assetPath("/images/melano-glo-serum.png"),
+    textureImage: assetPath("/images/routine-step1-dropper.jpg"),
     highlights: [
       "5% Niacinamide",
       "3% Tranexamic Acid",
@@ -161,8 +167,8 @@ export const PRODUCTS: Product[] = [
     mrpInr: 749,
     skinTypes: "All Skin Types • Zero White Cast",
     cardTheme: "sunlit",
-    image: "/images/bright-glo-sunscreen.png",
-    textureImage: "/images/routine-step2-swatch.jpg",
+    image: assetPath("/images/bright-glo-sunscreen.png"),
+    textureImage: assetPath("/images/routine-step2-swatch.jpg"),
     highlights: [
       "Broad Spectrum UV Protection",
       "Brightens & Evens Skin Tone",
