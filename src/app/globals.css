@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+
+  --color-espresso: #331C0F;
+  --color-espresso-deep: #241208;
+  --color-espresso-soft: #4A2D1C;
+  --color-cream: #FBF7F1;
+  --color-cream-warm: #F6EDE2;
+  --color-cream-deep: #EFE1D1;
+  --color-blush: #FBE6DF;
+  --color-blush-soft: #FDF2EE;
+  --color-sunlit: #FCEAB8;
+  --color-sunlit-soft: #FEF6DF;
+  --color-amber: #E9AE2B;
+  --color-amber-soft: #F7D884;
+  --color-muted: #6C5649;
+  --color-subtle: #9A8476;
+  --color-border-warm: #E8DCD0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-cream);
+    color: var(--color-espresso);
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-espresso);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #F4C75E;
+    color: #241208;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid var(--color-amber);
+    outline-offset: 2px;
+  }
+}
+
+/* Custom warm scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6EDE2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9B49F;
+  border-radius: 999px;
+  border: 2px solid #F6EDE2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9A8476;
+}
+
+/* Subtle luxury hero gradient overlay for legible editorial copy */
+.hero-sunlit-scrim {
+  background: linear-gradient(
+    90deg,
+    rgba(251, 241, 232, 0.96) 0%,
+    rgba(251, 241, 232, 0.88) 38%,
+    rgba(251, 241, 232, 0.25) 62%,
+    rgba(251, 241, 232, 0) 100%
+  );
+}
+
+@media (max-width: 1023px) {
+  .hero-sunlit-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(251, 241, 232, 0.94) 0%,
+      rgba(251, 241, 232, 0.84) 55%,
+      rgba(251, 241, 232, 0.3) 100%
+    );
+  }
+}
+
+.card-blush-surface {
+  background: linear-gradient(135deg, #FCE4DC 0%, #FDF1EC 55%, #F9DCD2 100%);
+}
+
+.card-sunlit-surface {
+  background: linear-gradient(135deg, #FEF4D6 0%, #FDF7E5 52%, #FCE49E 100%);
+}
